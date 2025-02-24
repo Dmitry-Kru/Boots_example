@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт о нейронных сетях</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .card-img-top {
+            height: 300px; /* Фиксированная высота */
+            object-fit: contain; /* Сохраняет пропорции и обрезает изображение */
+            width: 100%; /* Занимает всю ширину карточки */
+
+        }
+    </style>
+
+    <style>
+        /* Стили для слайдера */
+        #slider .carousel {
+            height: 700px; /* Фиксированная высота слайдера */
+        }
+
+        #slider .carousel-inner {
+            height: 100%; /* Занимает всю высоту слайдера */
+        }
+
+        #slider .carousel-item {
+            height: 100%; /* Занимает всю высоту контейнера */
+            text-align: center; /* Центрирование изображения */
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1 class="text-center">Нейронные сети и их возможности</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#slider">Слайдер</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cards">Карточки</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#accordion">Аккордеон</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#futer">Футер</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container my-5">
+
+        <!-- Секция со слайдером -->
+        <section id="slider" class="mb-5">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="gc.png" class="d-block w-100" alt="Gigachat">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="ds.jpeg" class="d-block w-100" alt="Deepseek">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="hg.jpg" class="d-block w-100" alt="Heygen">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Секция с карточками -->
+        <section id="cards" class="mb-5">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow border"> <!-- Добавлены shadow и border -->
+                        <img src="gc_label.jpg" class="card-img-top" alt="Gigachat">
+                        <div class="card-body">
+                            <h5 class="card-title">Gigachat</h5>
+                            <p class="card-text">Gigachat — это мощная нейронная сеть для обработки естественного языка.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow border"> <!-- Добавлены shadow и border -->
+                        <img src="ds_label.png" class="card-img-top" alt="Deepseek">
+                        <div class="card-body">
+                            <h5 class="card-title">Deepseek</h5>
+                            <p class="card-text">Deepseek — нейронная сеть для анализа данных и поиска закономерностей.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow border"> <!-- Добавлены shadow и border -->
+                        <img src="hg_label.png" class="card-img-top" alt="Heygen">
+                        <div class="card-body">
+                            <h5 class="card-title">Heygen</h5>
+                            <p class="card-text">Heygen — нейронная сеть для генерации контента и творческих задач.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с аккордеоном -->
+        <section id="accordion" class="mb-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Что такое Gigachat?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            GigaChat — сервис на основе искусственного интеллекта, способный общаться с пользователями в режиме диалога, генерировать по запросу тексты и изображения и писать программный код и создании музыки. Данный чат-бот разработан Сбером и поддерживает русский и английский языки. GigaChat использует генеративный искусственный интеллект на базе больших языковых моделей.
+
+GigaChat функционирует в формате чат-бота на официальном веб-сайте, в Telegram и ВКонтакте, на колонках SberBoom, SberBoom Mini 2, в мобильном приложении «Салют» на Android.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Что такое Deepseek?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            DeepSeek — это нейросеть, специально разработанная для программистов. Она помогает в написании кода и отвечает на вопросы, связанные с программированием.
+
+DeepSeek состоит из двух инструментов:
+
+Deepseek Chat — инструмент для поиска информации о программировании. Он может предоставить информацию об определённой библиотеке или решении.
+
+Deepseek Coder — нейросеть для написания кода, которая часто приводит примеры кода в своих ответах.
+
+Оба инструмента находятся в стадии альфа-тестирования и доступны для бесплатного использования после регистрации на сайте deepseek.com.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Что такое Heygen?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            HeyGen — это нейросеть, с помощью которой можно генерировать видеоролики, озвучивать их, дублировать на разные языки и создавать виртуальных дикторов, которые зачитывают текст. Главная фишка нейросети в том, что во время создания дубляжа она адаптирует движение губ человека под новую аудиодорожку и имитирует тембр голоса из оригинального ролика.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer id="futer" class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Контактная информация: example@example.com | +7 (495) 456-78-90</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Подключение FontAwesome для иконок -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
